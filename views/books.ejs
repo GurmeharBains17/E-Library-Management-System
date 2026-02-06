@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Available</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Pacifico&family=Lobster&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - E-Library Management</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+      :root {
+          --primary-color: #3a8a9e;
+          --secondary-color: #f0f4f8;
+          --accent-color: #2a6877;
+          --text-color: #333;
+          --light-text: #666;
+          --white: #fff;
+      }
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: var(--white);
+          color: var(--text-color);
+          line-height: 1.6;
+      }
+
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+          padding: 20px 0;
+          background-color: var(--white);
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          border-bottom: 1px solid #eee;
+      }
+
+      nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .logo {
+          font-size: 24px;
+          font-weight: 700;
+          color: var(--primary-color);
+      }
+
+      .nav-links {
+          display: flex;
+          gap: 30px;
+      }
+
+      .nav-links a {
+          text-decoration: none;
+          color: var(--text-color);
+          font-weight: 500;
+          transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+          color: var(--primary-color);
+      }
+
+      .cta-button {
+          background-color: var(--primary-color);
+          color: var(--white);
+          padding: 10px 24px;
+          border-radius: 30px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+          background-color: var(--accent-color);
+      }
+
+   
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f2f3f4; /* Updated Background Color */
+        }
+        /* Navigation */
+
+
+        /* Spacing for Navbar and Search Bar */
+        .content-container {
+            margin-top: 130px; /* Increased margin for more gap at the top */
+        }
+
+        /* Main Heading - Books Available */
+        h2 {
+            font-family: 'Lobster', cursive;
+            font-size: 45px;
+            font-weight: 700;
+            color: #a52a2a; /* Brown */
+        }
+
+        /* Explore by Category */
+        .explore-heading {
+            font-family: 'Pacifico', cursive;
+            font-size: 32px;
+            font-weight: 700;
+            color: black;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        /* Add Emoji after Explore by Category */
+        .explore-heading::after {
+            content: " 📚";
+        }
+
+        /* Upcoming Books Section - Moved Down */
+        .upcoming-section {
+            width: 20%;
+            text-align: left;
+            padding: 20px;
+            position: absolute;
+            left: 3%;
+            top: 65%; /* Adjusted lower to match 'Explore by Category' */
+            transform: translateY(-50%);
+        }
+
+        /* Updated Font Style for Upcoming Books */
+        .upcoming-title {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Playfair Display', serif;
+            color: #222;
+        }
+
+        /* Clock Animation - Clicking Effect */
+        .clock-emoji {
+            display: inline-block;
+            font-size: 28px;
+            animation: clock-tick 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes clock-tick {
+            0% { transform: rotate(-5deg) translateY(0px); }
+            50% { transform: rotate(5deg) translateY(-3px); }
+            100% { transform: rotate(-5deg) translateY(0px); }
+        }
+
+        .upcoming-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .upcoming-list li {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        /* Books Grid */
+/* Books Grid */
+/* Books Grid */
+.books-grid-container {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 20px; /* Adjusted to move slightly down */
+    margin-left: 10%;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 70%;
+}
+
+.category {
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+        /* Book Hover Effects */
+        .category:hover {
+            transform: scale(1.05);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .category a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .category img {
+            width: 100%;
+            max-width: 250px;
+            height: 350px;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover Effects for Images */
+        .category img:hover {
+            transform: rotate(3deg) scale(1.08);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+         /* Footer Styles */
+footer {
+    background-color: black;
+    color: var(--white);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Responsive ke liye */
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column:last-child {
+    margin-right: 0; /* Last column ka extra margin hataya */
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-column h3:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.footer-column p {
+    color: #aaa;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style-type: none; /* Dots hatane ke liye */
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center alignment */
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1); /* Hover effect */
+}/* See More Button */
+.see-more {
+    background-color: #f0f0f0;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 60%;
+    margin: 10% auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 🔍 Search Bar */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* 🌟 Search Input */
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* 🔍 Search Button */
+.search-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #007bff;
+    transition: 0.3s ease;
+}
+
+.search-button:hover {
+    color: #ff5722;
+}
+
+/* 🎭 Search Options Box */
+.search-options {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* 🏷 Search Options Title */
+.search-options p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🛠 Search Option Buttons */
+.search-option, .advanced-search {
+    padding: 8px 12px;
+    border: 2px solid #007bff;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-option:hover, .advanced-search:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* ✅ Active Search Option */
+.search-option.active {
+    background: #007bff;
+    color: white;
+}
+
+/* 🔻 OR TRY Text */
+.or-try {
+    padding: 0 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* ❌ Close Button */
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+    float: right;
+    transition: 0.3s ease-in-out;
+}
+
+.close-button:hover {
+    color: darkred;
+}
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: var(--white);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Responsive ke liye */
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column:last-child {
+    margin-right: 0; /* Last column ka extra margin hataya */
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-column h3:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.footer-column p {
+    color: #aaa;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style-type: none; /* Dots hatane ke liye */
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center alignment */
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1); /* Hover effect */
+}
+
+
+    </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">E-Library</div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/books">Books</a>
+                    <a href="/admin">Suggestions</a>
+                    <a href="/aboutus">About</a>
+                    <a href="/contactus">Contact</a>
+                </div>
+                <a href="/login" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content-container">
+        <!-- Heading -->
+        <h2>Books Available</h2>
+        <h3 class="explore-heading">Explore by Category</h3>
+
+        <!-- Upcoming Books Section (Moved Down) -->
+        <div class="upcoming-section">
+            <h3 class="upcoming-title">
+                Upcoming Books <span class="clock-emoji">⏳</span>
+            </h3>
+            <ul class="upcoming-list">
+                <li>💻 Computer Science</li>
+                <li>🗣 Language</li>
+                <li>🧠 Psychology</li>
+                <li>🤔 Philosophy</li>
+                <li>📜 History</li>
+                <li>🌍 Geography</li>
+                <li>🛐 Religion</li>
+                <li>💼 Business</li>
+            </ul>
+        </div>
+        <!--Search Bar-->
+    <!--Search Bar-->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Enter keyword to search collection...">
+        <button class="search-button">&#128269;</button>
+    
+        <div class="search-options">
+            <p>Search by :</p>
+            <button class="search-option active">ALL</button>
+            <button class="search-option">Author</button>
+            <button class="search-option">Subject</button>
+            <button class="search-option">ISBN/ISSN</button>
+            <span class="or-try">OR TRY</span>
+            <button class="advanced-search">Advanced Search</button>
+            <button class="close-button">&#10060;</button>
+        </div>
+    </div>
+        <!-- Books Grid Section -->
+        <div class="books-grid-container">
+            <div class="books-grid">
+                <div class="category">
+                    <a href="/literature">
+                        <h3>📖 Literature</h3>
+                        <img src="images/lit.jpg" alt="Literature Books">
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="/social">
+                        <h3>🌎 Social Sciences</h3>
+                        <img src="images/so.jpg" alt="Social Sciences Books">
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="/fictional">
+                        <h3>📚 Fiction</h3>
+                        <img src="images/as.jpg" alt="Fiction Books">
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="/arts">
+                        <h3>🎨 Art & Recreation</h3>
+                        <img src="images/ar.jpg" alt="Art and Recreation Books">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>E-Library</h3>
+                    <p>Your digital book hub providing access to thousands of books anytime, anywhere.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/aboutus">About Us</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/admin">Suggestions</a></li>
+                        <li><a href="/contactus">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Library St, Booktown</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@elibrary.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 E-Library Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const searchInput = document.querySelector('.search-input');
+        const searchOptions = document.querySelector('.search-options');
+      
+        searchInput.addEventListener('focus', () => {
+          searchOptions.style.display = 'block';
+        });
+      
+        document.addEventListener('click', function(event) {
+          if (!event.target.closest('.search-container')) {
+            searchOptions.style.display = 'none';
+          }
+        });
+      </script>
+</body>
+</html>

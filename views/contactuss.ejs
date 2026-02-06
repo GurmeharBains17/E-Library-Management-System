@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - E-Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - E-Library Management</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            :root {
+                --primary-color: #3a8a9e;
+                --secondary-color: #f0f4f8;
+                --accent-color: #2a6877;
+                --text-color: #333;
+                --light-text: #666;
+                --white: #fff;
+            }
+    
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: var(--white);
+                color: var(--text-color);
+                line-height: 1.6;
+            }
+    
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+    
+        :root {
+            --primary-color: #3498db;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --white: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: url('images/contact5.jpg') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 20px 0;
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+        }
+        
+        header .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Contact Page Content */
+        .container {
+            width: 80%;
+            background: transparent;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(201, 173, 173, 0.3);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            margin-top: 80px; /* Added margin to avoid overlapping navbar */
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            font-size: 32px;
+            font-weight: initial;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .header::after {
+            content: '';
+            width: 50%;
+            height: 3px;
+            background: rgb(135, 230, 230);
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-wrapper {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-info {
+            width: 45%;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        .info-box h3 {
+            color: rgb(135, 230, 230);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .info-box p {
+            font-size: 16px;
+            color: #ddd;
+            line-height: 1.5;
+        }
+
+        .contact-info div {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #ddd;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .contact-info div:hover {
+            transform: scale(1.1);
+            color: rgb(230, 216, 135);
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 20px;
+            color: cyan;
+        }
+
+        .contact-form {
+            width: 45%;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .contact-form input::placeholder, .contact-form textarea::placeholder {
+            color: #090101;
+        }
+        
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: cyan;
+            outline: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background: rgb(135, 230, 230);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .contact-form button:hover {
+            background: #00bcd4;
+        }
+
+        /* Mobile Menu Icon */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+            
+            header .container {
+                width: 90%;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+            }
+            
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+            
+            .menu-icon {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                background: var(--white);
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                padding: 20px 0;
+                transition: 0.3s;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .header {
+                font-size: 28px;
+            }
+            
+            .cta-button {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .contact-wrapper {
+                padding: 15px;
+            }
+            
+            .header {
+                font-size: 24px;
+            }
+            
+            .info-box h3 {
+                font-size: 18px;
+            }
+            
+            .info-box p, .contact-info div {
+                font-size: 14px;
+            }
+            
+            .contact-form button {
+                font-size: 16px;
+            }
+        }
+       
+         /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            padding: 60px 0 30px;
+            background-color: black;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-column h3:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: var(--primary-color);
+            margin-top: 10px;
+        }
+
+        .footer-column p {
+            color: #aaa;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .features, .testimonial-container {
+                flex-direction: column;
+            }
+
+            .about, .hero {
+                flex-direction: column-reverse;
+                padding: 50px 0;
+            }
+
+            .about-content, .hero-content {
+                padding: 30px 0;
+                text-align: center;
+            }
+
+            .about-content h2:after, .section-title:after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-icon {
+                display: block;
+            }
+
+            .subscribe-form {
+                flex-direction: column;
+            }
+
+            .subscribe-form input,
+            .subscribe-form button {
+                width: 100%;
+                border-radius: 30px;
+                margin-bottom: 10px;
+            }
+        }
+      
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">E-Library</div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/books">Books</a>
+                    <a href="/admin">Suggestions</a>
+                    <a href="/aboutus">About</a>
+                    <a href="/contactus">Contact</a>
+                </div>
+                <a href="/login" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="header">📚 Contact Us</div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="info-box">
+                    <h3>About E-Library</h3>
+                    <p>Discover E-Library, your ultimate digital resource for books, research papers, and educational materials.  
+                       Feel free to contact us for any queries, suggestions, or support. We're here to help!</p>
+                </div>
+                <div><i class="fas fa-phone"></i> +123 456 7890</div>
+                <div><i class="fas fa-envelope"></i> contact@elibrary.com</div>
+                <div><i class="fas fa-map-marker-alt"></i> 123 Library Street, City</div>
+            </div>
+            <div class="contact-form">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                <button onclick="sendMessage()">Send Message</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>E-Library</h3>
+                    <p>Your digital book hub providing access to thousands of books anytime, anywhere.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/aboutus">About Us</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/admin">Suggestions</a></li>
+                        <li><a href="/contactus">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Library St, Booktown</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@elibrary.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 E-Library Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function sendMessage() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+    
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields before sending.");
+                return;
+            }
+    
+            alert("Thank you, " + name + "! Your message has been sent.");
+            
+            // Clear form fields after submission
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+        
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

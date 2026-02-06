@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <style>
+        /* (CSS same as your HTML file, preserved) */
+        :root {
+            --primary-color: #3a8a9e;
+            --secondary-color: #f0f4f8;
+            --accent-color: #2a6877;
+            --text-color: #333;
+            --light-text: #666;
+            --white: #fff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('/images/admin.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; background-color: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eee; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 700; color: var(--primary-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .cta-button { background-color: var(--primary-color); color: var(--white); padding: 10px 24px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s; }
+        .cta-button:hover { background-color: var(--accent-color); }
+        h1 { text-align: center; margin-top: 20px; color: #fff; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); }
+        .form-container {
+            max-width: 600px; margin: 30px auto; background: rgba(255, 255, 255, 0.9);
+            padding: 30px; border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .form-container label { font-weight: bold; color: #555; margin-bottom: 5px; display: inline-block; }
+        .form-container input, .form-container select, .form-container textarea {
+            width: calc(100% - 10px); padding: 15px; margin-left: -10px; margin-bottom: 20px;
+            border: 1px solid #ddd; border-radius: 8px; font-size: 18px;
+        }
+        .form-container input:focus, .form-container select:focus, .form-container textarea:focus {
+            border-color: #6a11cb; box-shadow: 0 0 8px rgba(106, 17, 203, 0.2); outline: none;
+        }
+        .form-container button {
+            background: linear-gradient(to right, #6a11cb, #2575fc); color: #fff;
+            border: none; cursor: pointer; font-size: 18px; transition: all 0.3s ease;
+            font-weight: bold; margin-top: 20px; padding: 15px; width: 50%; align-self: flex-start; margin-left: 140px;
+        }
+        .form-container button:hover { background: linear-gradient(to right, #2575fc, #6a11cb); transform: scale(1.05); }
+        .form-container textarea { resize: none; }
+        input:hover, select:hover, textarea:hover { border-color: #6a11cb; }
+        footer { background-color: var(--text-color); color: var(--white); padding: 60px 0 30px; background-color: black; }
+        .footer-content { display: flex; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; }
+        .footer-column { flex: 1; margin-right: 30px; min-width: 200px; }
+        .footer-column h3 { font-size: 20px; margin-bottom: 20px; position: relative; }
+        .footer-column h3:after { content: ""; display: block; width: 30px; height: 2px; background-color: var(--primary-color); margin-top: 10px; }
+        .footer-column p { color: #aaa; margin-bottom: 20px; font-size: 14px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #aaa; text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--white); }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid #444; color: #aaa; font-size: 14px; }
+        .social-icons { display: flex; gap: 15px; }
+        .social-icons a { color: var(--white); font-size: 18px; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--primary-color); }
+    </style>
+    <script>
+        function showThankYouMessage(event) {
+            event.preventDefault();
+            alert("Thank you for your suggestions!\nYour feedback has been successfully submitted.");
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">E-Library</div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/books">Books</a>
+                    <a href="/admin">Suggestions</a>
+                    <a href="/aboutus">About</a>
+                    <a href="/contactus">Contact</a>
+                </div>
+                <a href="/login" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <h1>Share Your Book Suggestions</h1>
+    <div class="form-container">
+        <form action="/submit-suggestion" method="POST" onsubmit="showThankYouMessage(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="100" required>
+
+            <label for="preferences">Book Preferences:</label>
+            <select id="preferences" name="preferences" required>
+                <option value="" disabled selected>Select a preference</option>
+                <% let categories = ['Fiction', 'Non-Fiction', 'Science', 'Biography', 'Mystery', 'Other']; %>
+                <% categories.forEach(category => { %>
+                    <option value="<%= category.toLowerCase() %>"><%= category %></option>
+                <% }) %>
+            </select>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Share your thoughts..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>E-Library</h3>
+                    <p>Your digital book hub providing access to thousands of books anytime, anywhere.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/aboutus">About Us</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/admin">Suggestions</a></li>
+                        <li><a href="/contactus">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Library St, Booktown</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@elibrary.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 E-Library Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
