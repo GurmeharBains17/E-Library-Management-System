@@ -1,0 +1,529 @@
+<style>
+:root {
+    --primary-color: #3a8a9e;
+    --secondary-color: #f0f4f8;
+    --accent-color: #2a6877;
+    --text-color: #333;
+    --light-text: #666;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+
+  body {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f3f4; /* Updated Background Color */
+  }
+  /* Navigation */
+
+
+  /* Spacing for Navbar and Search Bar */
+  .content-container {
+      margin-top: 130px; /* Increased margin for more gap at the top */
+  }
+
+  /* Main Heading - Books Available */
+  h2 {
+      font-family: 'Lobster', cursive;
+      font-size: 45px;
+      font-weight: 700;
+      color: #a52a2a; /* Brown */
+  }
+
+  /* Explore by Category */
+  .explore-heading {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      font-weight: 700;
+      color: black;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+  }
+
+  /* Add Emoji after Explore by Category */
+  .explore-heading::after {
+      content: " 📚";
+  }
+
+  /* Upcoming Books Section - Moved Down */
+  .upcoming-section {
+      width: 20%;
+      text-align: left;
+      padding: 20px;
+      position: absolute;
+      left: 3%;
+      top: 65%; /* Adjusted lower to match 'Explore by Category' */
+      transform: translateY(-50%);
+  }
+
+  /* Updated Font Style for Upcoming Books */
+  .upcoming-title {
+      font-size: 28px;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: #222;
+  }
+
+  /* Clock Animation - Clicking Effect */
+  .clock-emoji {
+      display: inline-block;
+      font-size: 28px;
+      animation: clock-tick 1s infinite alternate ease-in-out;
+  }
+
+  @keyframes clock-tick {
+      0% { transform: rotate(-5deg) translateY(0px); }
+      50% { transform: rotate(5deg) translateY(-3px); }
+      100% { transform: rotate(-5deg) translateY(0px); }
+  }
+
+  .upcoming-list {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  .upcoming-list li {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 30px;
+  }
+
+  /* Books Grid */
+/* Books Grid */
+/* Books Grid */
+.books-grid-container {
+display: flex;
+justify-content: center;
+width: 85%;
+margin: auto;
+margin-top: 20px; /* Adjusted to move slightly down */
+margin-left: 10%;
+}
+
+.books-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 30px;
+width: 70%;
+}
+
+.category {
+text-align: center;
+padding: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+  /* Book Hover Effects */
+  .category:hover {
+      transform: scale(1.05);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .category a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+  .category img {
+      width: 100%;
+      max-width: 250px;
+      height: 350px;
+      border-radius: 12px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Hover Effects for Images */
+  .category img:hover {
+      transform: rotate(3deg) scale(1.08);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+   /* Footer Styles */
+footer {
+background-color: black;
+color: var(--white);
+padding: 60px 0 30px;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap; /* Responsive ke liye */
+justify-content: space-between;
+margin-bottom: 40px;
+}
+
+.footer-column {
+flex: 1;
+margin-right: 30px;
+}
+
+.footer-column:last-child {
+margin-right: 0; /* Last column ka extra margin hataya */
+}
+
+.footer-column h3 {
+font-size: 20px;
+margin-bottom: 20px;
+position: relative;
+}
+
+.footer-column h3:after {
+content: "";
+display: block;
+width: 30px;
+height: 2px;
+background-color: var(--primary-color);
+margin-top: 10px;
+}
+
+.footer-column p {
+color: #aaa;
+margin-bottom: 20px;
+font-size: 14px;
+}
+
+.footer-links {
+list-style-type: none; /* Dots hatane ke liye */
+padding: 0;
+}
+
+.footer-links li {
+margin-bottom: 10px;
+}
+
+.footer-links a {
+color: #aaa;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: var(--white);
+}
+
+.copyright {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid #444;
+color: #aaa;
+font-size: 14px;
+margin-top: 20px;
+}
+
+.social-icons {
+display: flex;
+gap: 15px;
+justify-content: center; /* Center alignment */
+}
+
+.social-icons a {
+color: var(--white);
+font-size: 18px;
+transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons a:hover {
+color: var(--primary-color);
+transform: scale(1.1); /* Hover effect */
+}/* See More Button */
+.see-more {
+background-color: #f0f0f0;
+}
+
+/* Modal Styles */
+.modal {
+display: none;
+position: fixed;
+z-index: 10;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+background: white;
+padding: 20px;
+width: 60%;
+margin: 10% auto;
+border-radius: 10px;
+position: relative;
+}
+
+.close {
+position: absolute;
+top: 10px;
+right: 20px;
+font-size: 20px;
+cursor: pointer;
+}
+
+/* 🔍 Search Bar */
+.search-container {
+position: relative;
+width: 100%;
+max-width: 600px;
+margin: auto;
+}
+
+/* 🌟 Search Input */
+.search-input {
+width: 100%;
+padding: 12px 15px;
+font-size: 18px;
+border: 2px solid #007bff;
+border-radius: 8px;
+outline: none;
+transition: 0.3s ease-in-out;
+}
+
+/* 🔍 Search Button */
+.search-button {
+position: absolute;
+right: 15px;
+top: 50%;
+transform: translateY(-50%);
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+color: #007bff;
+transition: 0.3s ease;
+}
+
+.search-button:hover {
+color: #ff5722;
+}
+
+/* 🎭 Search Options Box */
+.search-options {
+display: none;
+position: absolute;
+background: white;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+padding: 15px;
+border-radius: 8px;
+top: 100%;
+left: 0;
+width: 100%;
+z-index: 10;
+}
+
+/* 🏷 Search Options Title */
+.search-options p {
+margin: 0;
+font-size: 16px;
+font-weight: bold;
+color: #333;
+}
+
+/* 🛠 Search Option Buttons */
+.search-option, .advanced-search {
+padding: 8px 12px;
+border: 2px solid #007bff;
+background: white;
+cursor: pointer;
+border-radius: 6px;
+font-size: 14px;
+transition: 0.3s ease-in-out;
+}
+
+.search-option:hover, .advanced-search:hover {
+background: #007bff;
+color: white;
+}
+
+/* ✅ Active Search Option */
+.search-option.active {
+background: #007bff;
+color: white;
+}
+
+/* 🔻 OR TRY Text */
+.or-try {
+padding: 0 10px;
+color: #888;
+font-size: 14px;
+}
+
+/* ❌ Close Button */
+.close-button {
+background: none;
+border: none;
+cursor: pointer;
+font-size: 18px;
+color: red;
+float: right;
+transition: 0.3s ease-in-out;
+}
+
+.close-button:hover {
+color: darkred;
+}
+/* Footer Styles */
+footer {
+background-color: black;
+color: var(--white);
+padding: 60px 0 30px;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap; /* Responsive ke liye */
+justify-content: space-between;
+margin-bottom: 40px;
+}
+
+.footer-column {
+flex: 1;
+margin-right: 30px;
+}
+
+.footer-column:last-child {
+margin-right: 0; /* Last column ka extra margin hataya */
+}
+
+.footer-column h3 {
+font-size: 20px;
+margin-bottom: 20px;
+position: relative;
+}
+
+.footer-column h3:after {
+content: "";
+display: block;
+width: 30px;
+height: 2px;
+background-color: var(--primary-color);
+margin-top: 10px;
+}
+
+.footer-column p {
+color: #aaa;
+margin-bottom: 20px;
+font-size: 14px;
+}
+
+.footer-links {
+list-style-type: none; /* Dots hatane ke liye */
+padding: 0;
+}
+
+.footer-links li {
+margin-bottom: 10px;
+}
+
+.footer-links a {
+color: #aaa;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: var(--white);
+}
+
+.copyright {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid #444;
+color: #aaa;
+font-size: 14px;
+margin-top: 20px;
+}
+
+.social-icons {
+display: flex;
+gap: 15px;
+justify-content: center; /* Center alignment */
+}
+
+.social-icons a {
+color: var(--white);
+font-size: 18px;
+transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons a:hover {
+color: var(--primary-color);
+transform: scale(1.1); /* Hover effect */
+}
+
+
+</style>
+</head>
